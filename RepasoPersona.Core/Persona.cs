@@ -6,7 +6,7 @@ namespace RepasoPersona.Core
     {
         public string Nombre {get ; private set ;}
         public string Apellido {get ; private set ;}
-        public string Efectivo {get ; private set ;}
+        public double Efectivo {get ; private set ;}
 
         
         // Contructor
