@@ -8,9 +8,8 @@ namespace RepasoPersona.Core
         public string Apellido {get ; private set ;}
         public double Efectivo {get ; private set ;}
 
-        
-        // Contructor
         public Persona() => Efectivo = 0 ;
+        // Contructor
         public Persona (string nombre, string apellido, double efectivo)
         {
             Nombre = nombre;
@@ -29,7 +28,9 @@ namespace RepasoPersona.Core
         }
         public void Acreditar(double monto)
         {
-            
+            if (monto <= 0)
+                throw new ArgumentException("El monto tiene que ser mayor a cero.");
+            Efectivo += monto;
         }
     }
 }
